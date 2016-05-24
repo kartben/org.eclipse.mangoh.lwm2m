@@ -9,9 +9,26 @@
 	<OCD id="org.eclipse.mangoh.lwm2m.Component" name="LWM2M Client"
 		description="LWM2M Client">
 
-		<!-- <Icon resource="http://s3.amazonaws.com/kura-resources/application/icon/applications-other.png" 
-			size="32"/> -->
+        <Icon resource="CloudService" size="32"/>
+        
+        <!-- default to: leshan.eclipse.org -->
+        <AD id="server.address"
+            name="server.address"
+            type="String"
+            cardinality="0"
+            required="true"
+            default="5.39.83.206"
+            description="LWM2M server hostname/IP">
+        </AD>
 
+        <AD id="server.port"
+            name="server.port"
+            type="Integer"
+            cardinality="0"
+            required="true"
+            default="5683"
+            description="LWM2M server port">
+        </AD>
 	</OCD>
 
 	<Designate pid="org.eclipse.mangoh.lwm2m.Component">

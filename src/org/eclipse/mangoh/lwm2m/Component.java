@@ -47,7 +47,11 @@ public class Component implements ConfigurableComponent {
 
 		// update
 		String endpoint = ProcessUtil.command("cm", "info", "imei");
-		String serverURI = "coap://na.airvantage.net:5685";
+		
+		String host = properties.get("server.address").toString();
+		int port = Integer.valueOf(properties.get("server.port").toString());
+		
+		String serverURI = "coap://" + host + ":" + port;
 		int localPort = 0;
 		String localAddress = null;
 		String secureLocalAddress = null;
