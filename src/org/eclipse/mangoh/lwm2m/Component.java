@@ -46,7 +46,7 @@ public class Component implements ConfigurableComponent {
 		}
 
 		// update
-		String endpoint = ProcessUtil.command("cm", "info", "imei");
+		String endpoint = ProcessUtil.command("cm", "info", "fsn");
 		
 		String host = properties.get("server.address").toString();
 		int port = Integer.valueOf(properties.get("server.port").toString());
